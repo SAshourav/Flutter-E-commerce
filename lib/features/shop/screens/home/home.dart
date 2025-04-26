@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -6,8 +7,22 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text("Home Page"),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            PrimaryHeaderContainer(
+              child: Container()
+            )
+          ],
+        ),
+      ),
     );
   }
 }
+
+
+
+
+
+
