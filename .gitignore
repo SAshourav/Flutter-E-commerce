@@ -34,7 +34,7 @@ migrate_working_dir/
 
 # Ignore all build files except APKs
 /build/
-/build/app/outputs/apk/**/   # <-- allow APK folder and contents
+/build/app/outputs/apk/debug/   # <-- allow APK folder and contents
 
 # Symbolication related
 app.*.symbols
