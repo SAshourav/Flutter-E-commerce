@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/circular_container.dart';
+import 'package:t_store/common/widgets/product_cards/product_card_vertical.dart';
 import 'package:t_store/features/shop/screens/home/widgets/homeAppBar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:t_store/features/shop/screens/home/widgets/promo_slider.dart';
@@ -13,6 +14,7 @@ import '../../../../common/widgets/custom_shapes/containers/primary_header_conta
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/image_text_widgets/vertical_image_text.dart';
 import '../../../../common/widgets/images/t_rounded_images.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products_cart/cart_menu_icon.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/image_strings.dart';
@@ -25,11 +27,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            PrimaryHeaderContainer(
+            const PrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// AppBar
@@ -55,10 +57,16 @@ class HomeScreen extends StatelessWidget {
               )
             ),
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: TpromoSlider(banners: [
-                TImages.promoBanner1, TImages.promoBanner2,TImages.promoBanner3
-              ],
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  const TpromoSlider(banners: [
+                    TImages.promoBanner1, TImages.promoBanner2,TImages.promoBanner3
+                  ],
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
+                  GridLayout(itemCount: 2,itemBuilder: (_, index) => const ProductCardVertical(),),
+                ],
               )
             )
           ],
@@ -67,6 +75,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
