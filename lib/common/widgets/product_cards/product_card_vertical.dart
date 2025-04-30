@@ -11,6 +11,7 @@ import 'package:t_store/utils/helpers/helper_functions.dart';
 
 import '../icons/t_circular_icon.dart';
 import '../texts/product_price_text.dart';
+import 'brand_title_with_verification.dart';
 
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({super.key});
@@ -60,44 +61,42 @@ class ProductCardVertical extends StatelessWidget {
             ),
             const SizedBox(height: TSizes.spaceBtwItems / 2,),
             /// Details
-            Padding(
-                padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+                padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ProductTitleText(title: 'Green Nike Air Shoes', smallSize: true,),
-                  const SizedBox(height: TSizes.spaceBtwItems / 2,),
-                  Row(
-                    children: [
-                      Text("Nike", overflow: TextOverflow.ellipsis, maxLines: 1,style: Theme.of(context).textTheme.labelMedium,),
-                      const SizedBox(width: TSizes.xs,),
-                      const Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs),
-      
-                    ],
-                  ),
-                  const SizedBox(height: TSizes.spaceBtwItems / 2,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      /// Price
-                      const ProductPriceText(price: '35.0',),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(TSizes.productImageRadius)
-                          )
-                        ),
-                        child: const SizedBox(
-                            width: TSizes.iconLg * 1.2 ,
-                            height: TSizes.iconLg * 1.2 ,
-                            child: Center(child: Icon(Iconsax.add, color: TColors.white))),
-                      )
-                    ],
-                  )
+                  ProductTitleText(title: 'Green Nike Air Shoes', smallSize: true,),
+                  SizedBox(height: TSizes.spaceBtwItems / 2,),
+                  TBrandTitleWithVerifivation(title: 'Nike'),
+                  SizedBox(height: TSizes.spaceBtwItems / 2,),
+
                 ],
               ),
+            ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                /// Price
+                const Padding(
+                  padding:  EdgeInsets.only(left: TSizes.sm),
+                  child:  ProductPriceText(price: '35.0',),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(TSizes.cardRadiusMd),
+                          bottomRight: Radius.circular(TSizes.productImageRadius)
+                      )
+                  ),
+                  child: const SizedBox(
+                      width: TSizes.iconLg * 1.2 ,
+                      height: TSizes.iconLg * 1.2 ,
+                      child: Center(child: Icon(Iconsax.add, color: TColors.white))),
+                )
+              ],
             )
           ],
         ),
@@ -105,6 +104,8 @@ class ProductCardVertical extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
