@@ -4,8 +4,9 @@ import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:t_store/common/widgets/list_tille/settings_menu_tile.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
+import 'package:t_store/features/personalization/screens/profile/profile.dart';
 import 'package:t_store/utils/constants/colors.dart';
-
+import 'package:get/get.dart';
 import '../../../../common/widgets/list_tille/user_profile_tile.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
@@ -27,7 +28,7 @@ class SettingScreen extends StatelessWidget {
                 const SizedBox(height: TSizes.spaceBtwSections,),
 
                 // User Profile Card
-                TUserProfileTile(dark: dark),
+                TUserProfileTile(dark: dark, onTap: ()=> Get.to(()=> const ProfileScreen()),),
                 const SizedBox(height: TSizes.spaceBtwSections,),
               ],
               )

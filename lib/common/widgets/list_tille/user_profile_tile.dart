@@ -8,9 +8,11 @@ class TUserProfileTile extends StatelessWidget {
   const TUserProfileTile({
     super.key,
     required this.dark,
+    required this.onTap,
   });
 
   final bool dark;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class TUserProfileTile extends StatelessWidget {
       ),
       title: Text("MD SABBIR AHMED", style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white),),
       subtitle: Text("sabbir.personal@proton.me", style: Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white),),
-      trailing: IconButton(onPressed: (){}, icon: const Icon(Iconsax.edit, color: TColors.white,)),
+      trailing: IconButton(onPressed: onTap, icon: const Icon(Iconsax.edit, color: TColors.white,)),
     );
   }
 }
