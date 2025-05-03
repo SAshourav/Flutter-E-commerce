@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:t_store/utils/device/device_utility.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 import '../../../utils/constants/colors.dart';
 
@@ -8,11 +6,12 @@ class TCardCounterIcon extends StatelessWidget {
   const TCardCounterIcon({
     super.key,
     required this.onPressed,
-    this.iconColor,
+    this.iconColor, required this.icon,
   });
 
   final VoidCallback onPressed;
   final Color? iconColor;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class TCardCounterIcon extends StatelessWidget {
         IconButton(
           onPressed: onPressed,
           icon: Icon(
-            Iconsax.shopping_bag,
+            icon,
             color: iconColor ?? (dark ? TColors.white : TColors.black),
           ),
         ),

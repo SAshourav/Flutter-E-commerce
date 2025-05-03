@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../../../../../common/widgets/appbar/appbar.dart';
 import '../../../../../common/widgets/products_cart/cart_menu_icon.dart';
@@ -20,7 +21,7 @@ class THomeAppBar extends StatelessWidget {
       ],
     ),
       actions: [
-        TCardCounterIcon(onPressed: () {}, iconColor: TColors.white,)
+        TCardCounterIcon(onPressed: () {}, iconColor: TColors.white, icon: Iconsax.shopping_cart,)
       ],
     );
   }
