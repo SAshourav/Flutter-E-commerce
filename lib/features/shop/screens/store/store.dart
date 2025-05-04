@@ -34,6 +34,7 @@ class Store extends StatelessWidget {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
+        backgroundColor: dark ? const Color(0xFF2A3C34) : const Color(0xFFF5E8C7),
         appBar: TAppBar(
           title: Text('Store', style: Theme.of(context).textTheme.headlineMedium),
           actions: [
@@ -47,7 +48,7 @@ class Store extends StatelessWidget {
                 automaticallyImplyLeading: false,
                 pinned: true,
                 floating: true,
-                backgroundColor: dark ? TColors.black : TColors.white,
+                  backgroundColor: dark ? const Color(0xFF2A3C34) : const Color(0xFFF5E8C7),
                 expandedHeight: 440,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.all(TSizes.defaultSpace),
@@ -60,7 +61,7 @@ class Store extends StatelessWidget {
                       const TSearchContainer(
                         text: 'Search in Store',
                         showBorder: true,
-                        showBackground: false,
+                        showBackground: true,
                       ),
                       const SizedBox(height: TSizes.spaceBtwSections),
                       // Featured Brands

@@ -9,6 +9,7 @@ import '../../../../common/widgets/custom_shapes/containers/search_container.dar
 import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/image_strings.dart';
+import '../../../../utils/helpers/helper_functions.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -16,7 +17,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
+      backgroundColor: dark ? const Color(0xFF2A3C34) : const Color(0xFFF5E8C7),
       body: SingleChildScrollView(
         child: Column(
           children: [

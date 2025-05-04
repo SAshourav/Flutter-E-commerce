@@ -18,6 +18,7 @@ class SettingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
+      backgroundColor: dark ? const Color(0xFF2A3C34) : const Color(0xFFF5E8C7),
       body: SingleChildScrollView(
         child: Column(
           children: [
