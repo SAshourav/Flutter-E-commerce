@@ -10,9 +10,10 @@ import 'package:t_store/features/shop/screens/product_details/widgets/product_at
 import 'package:t_store/features/shop/screens/product_details/widgets/product_details_image_slider.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/t_rating_sharing.dart';
+import 'package:t_store/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
-
+import 'package:get/get.dart';
 import '../../../../common/widgets/custom_shapes/curved_edges/curvedEdgeWidgets.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
@@ -71,7 +72,10 @@ class ProductDetails extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const TSectionHeading(title: "Reviews(199)", showActionButton: false,),
-                      IconButton(onPressed: (){}, icon: const Icon( Iconsax.arrow_right3, size: 18,))
+                      IconButton(
+                        onPressed: ()=> Get.to(()=> const ProductReviewsScreen()),
+                        icon: const Icon(Icons.arrow_forward, size: 18), // Use a default Flutter icon
+                      )
                     ],
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections,),
