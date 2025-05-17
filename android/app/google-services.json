@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "383346744968",
+    "project_id": "pookie-store",
+    "storage_bucket": "pookie-store.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383346744968:android:a1b5f07ec3cd399c16493d",
+        "android_client_info": {
+          "package_name": "com.example.t_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrqWfKyHUk2WUBF9HHavJIfvcTcq8K5y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

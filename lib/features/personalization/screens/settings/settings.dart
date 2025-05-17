@@ -5,6 +5,7 @@ import 'package:t_store/common/widgets/custom_shapes/containers/primary_header_c
 import 'package:t_store/common/widgets/list_tille/settings_menu_tile.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/features/personalization/screens/address/address.dart';
+import 'package:t_store/features/personalization/screens/orders/orders.dart';
 import 'package:t_store/features/personalization/screens/profile/profile.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:get/get.dart';
@@ -46,7 +47,7 @@ class SettingScreen extends StatelessWidget {
 
                   TSettingMenuTile(icon: Iconsax.safe_home, title: "My Addresses", subTitle: 'Set Shipping delivery address', onTap: ()=> Get.to(()=> const UserAddressScreen()),),
                   TSettingMenuTile(icon: Iconsax.shopping_cart, title: "My Cart", subTitle: 'Set Shipping delivery address', onTap: () { },),
-                  TSettingMenuTile(icon: Iconsax.bag_tick, title: "My Orders", subTitle: 'Set Shipping delivery address', onTap: () { },),
+                  TSettingMenuTile(icon: Iconsax.bag_tick, title: "My Orders", subTitle: 'Set Shipping delivery address', onTap: ()=> Get.to(()=> const OrdersScreen()),),
                   TSettingMenuTile(icon: Iconsax.bank, title: "Bank Account", subTitle: 'Set Shipping delivery address', onTap: () { },),
                   TSettingMenuTile(icon: Iconsax.discount_shape, title: "My Coupons", subTitle: 'Set Shipping delivery address', onTap: () { },),
                   TSettingMenuTile(icon: Iconsax.notification, title: "Notifications", subTitle: 'Set Shipping delivery address', onTap: () { },),

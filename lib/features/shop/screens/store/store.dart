@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/appbar/tab_bar.dart';
+import 'package:t_store/common/widgets/brand/all_brands.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:t_store/common/widgets/layouts/grid_layout.dart';
 import 'package:t_store/common/widgets/products_cart/cart_menu_icon.dart';
@@ -68,9 +69,7 @@ class Store extends StatelessWidget {
                       TSectionHeading(
                         title: 'Featured Brands',
                         showActionButton: true,
-                        onPressed: () {
-                          // Navigate to all brands screen
-                        },
+                        onPressed: ()=> const AllBrandsScreen(),
                         textColor: dark ? TColors.white : TColors.black,
                       ),
                       const SizedBox(height: TSizes.spaceBtwItems),
